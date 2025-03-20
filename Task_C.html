@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -24,8 +27,8 @@
 
         .service-panel img {
             width: 115px;
-    margin-bottom: 16px;
-    margin-top: 5px;
+            margin-bottom: 16px;
+            margin-top: 5px;
         }
 
         .service-panel h1 {
@@ -74,7 +77,7 @@
             font-size: 16px;
             line-height: 20px;
             letter-spacing: -0.01em;
-            color: #000000;
+            color: var(--Text-Black-60, #00000099);
         }
 
         .input-container {
@@ -84,14 +87,20 @@
 
         .input-container input[type="email"],
         .input-container input[type="password"] {
-            width: 100%;
+            width: 360px;
             height: 48px;
-            padding: 0 16px;
-            border: 1px solid #ccc;
-            border-radius: 24px; /* Rounded borders for email and password fields */
-            font-family: 'DM Sans', sans-serif;
+            padding-right: 16px;
+            padding-left: 16px;
+            gap: 0;
+            border: 1px solid var(--Border-Black-10, #0000001A);
+            border-radius: 24px;
             font-size: 16px;
             background-color: rgba(255, 255, 255, 0.8);
+            background: var(--Background-White-60, #FFFFFF99);
+            font-family: DM Sans;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
         }
 
         .input-container .toggle-password {
@@ -100,7 +109,8 @@
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
-            width: 24px; /* Adjust the size of the eye icon */
+            width: 24px;
+            /* Adjust the size of the eye icon */
             height: 24px;
         }
 
@@ -110,19 +120,23 @@
         }
 
         /* Toggle password visibility using CSS */
-        .input-container input[type="checkbox"]:checked ~ input[type="password"] {
-            -webkit-text-security: none; /* Show password */
+        .input-container input[type="checkbox"]:checked~input[type="password"] {
+            -webkit-text-security: none;
+            /* Show password */
         }
 
         .signin-button {
-            font-family: 'DM Sans', sans-serif;
+            font-family: DM Sans;
             font-weight: 700;
             font-size: 16px;
             line-height: 24px;
-            letter-spacing: -0.01em;
-            width: 100%;
+            letter-spacing: 0px;
+            width: 360px;
             height: 48px;
             border-radius: 32px;
+            padding-right: 32px;
+            padding-left: 32px;
+            gap: 8px;
             background-color: #000000;
             color: #ffffff;
             border: none;
@@ -130,7 +144,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            margin-left: 13px;
         }
 
         .remember-me {
@@ -144,9 +158,12 @@
             height: 28px;
             border-radius: 8px;
             cursor: pointer;
-            background-color: #ccc; /* Grey color for checkbox */
-            border: none; /* No border for checkbox */
-            appearance: none; /* Remove default checkbox styling */
+            background-color: #ccc;
+            /* Grey color for checkbox */
+            border: none;
+            /* No border for checkbox */
+            appearance: none;
+            /* Remove default checkbox styling */
             position: relative;
         }
 
@@ -159,7 +176,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            opacity: 0; /* Hidden by default */
+            opacity: 0;
+            /* Hidden by default */
         }
 
         /* Show the tick when the checkbox is checked */
@@ -168,7 +186,8 @@
         }
 
         .remember-me input[type="checkbox"]:checked {
-            background-color: #000000; /* Change color when checked */
+            background-color: #000000;
+            /* Change color when checked */
         }
 
         .remember-me label {
@@ -189,7 +208,8 @@
             text-decoration: underline;
             cursor: pointer;
             color: #000000;
-            margin-left: auto; /* Move "Login with Code" to the right */
+            margin-left: auto;
+            /* Move "Login with Code" to the right */
         }
 
         .checkbox-and-login {
@@ -226,6 +246,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="service-panel">
         <!-- Dummy Logo -->
@@ -259,4 +280,5 @@
         <button class="signin-button">Sign In</button>
     </div>
 </body>
+
 </html>
